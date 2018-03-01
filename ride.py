@@ -13,4 +13,4 @@ class Ride:
         return helper.distance(self.start, self.finish)
 
     def can_start(self, time):
-        return self.start < time < self.finish
+        return self.earliest_pickup <= time <= self.latest_pickup

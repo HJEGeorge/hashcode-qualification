@@ -13,3 +13,6 @@ class Driver:
         self.willNextBeFree = time + distance_to_ride + ride.distance
 
         self.currentLocation = ride.end
+
+    def is_free(self, time):
+        return self.willNextBeFree <= time
