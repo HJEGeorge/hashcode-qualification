@@ -11,10 +11,10 @@ def read_file(filename):
         rows, columns, totalVehicles, totalRides, bonusPerRide, totalTime = [int(n) for n in line.split()]
 
         for i in range(totalVehicles):
-            drivers.append(driver.Driver())
+            drivers.append(driver.Driver(i))
         for i in range(totalRides):
             line = f.readline().split()
-            rides.append(ride.Ride((line[0], line[1]), (line[2], line[3]), line[4], line[5]))
+            rides.append(ride.Ride((line[0], line[1]), (line[2], line[3]), line[4], line[5], i))
 
         rides.sort(key=lambda x: x.distance)
         print(rides)

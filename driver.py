@@ -3,7 +3,8 @@ import helper
 
 class Driver:
 
-    def __init__(self):
+    def __init__(self, id):
+        self.id = id
         self.currentLocation = (0, 0)
         self.willNextBeFree = 0
 

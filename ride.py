@@ -3,7 +3,8 @@ import helper
 
 class Ride:
 
-    def __init__(self, start, finish, earliest_start, latest_finish):
+    def __init__(self, start, finish, earliest_start, latest_finish, id):
+        self.id = id
         self.start = start
         self.finish = finish
         self.earliest_pickup = earliest_start
