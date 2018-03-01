@@ -17,5 +17,5 @@ class Ride:
     def can_start(self, time):
         return self.earliest_pickup <= time <= self.latest_pickup and not self.started
 
-    def start(self):
+    def start_ride(self):
         self.started = True

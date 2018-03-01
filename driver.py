@@ -12,9 +12,9 @@ class Driver:
     def pick_up(self, time, ride):
         """increases time to show the distance travelled"""
         distance_to_ride = helper.distance(self.currentLocation, ride.start)
-        self.willNextBeFree = time + distance_to_ride + ride.distance
+        self.willNextBeFree = time + distance_to_ride + ride.distance()
 
-        self.currentLocation = ride.end
+        self.currentLocation = ride.finish
 
         self.rides.append(ride.id)
 
