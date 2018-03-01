@@ -52,7 +52,6 @@ def main():
                 ride.start()
 
 
-
     print('Outputting to file %s' % sys.argv[2])
 
 
