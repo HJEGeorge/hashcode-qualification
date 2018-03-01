@@ -19,6 +19,8 @@ def read_file(filename):
         rides.sort(key=lambda x: x.distance)
         print(rides)
 
+        return rows, columns, totalVehicles, totalRides, bonusPerRide, totalTime
+
 
 def main():
     '''
