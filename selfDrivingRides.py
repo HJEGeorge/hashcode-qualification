@@ -58,10 +58,11 @@ def main():
                 print(f"Driver {driver.id} has picked up ride {ride.id}")
                 driver.pick_up(ride)
                 ride.start()
-
+                available_drivers.remove(driver)
 
     print('Outputting to file %s' % sys.argv[2])
 
+    output_file(sys.argv[2])
 
 
 
