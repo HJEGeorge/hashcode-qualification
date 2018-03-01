@@ -1,12 +1,15 @@
+import helper
+
+
 class Driver:
 
     def __init__(self):
-        self.currentTime = 0
-        self.row = 0
-        self.column = 0
+        self.currentLocation = (0, 0)
         self.willNextBeFree = 0
 
-    def pick_up(self, ride):
-        self.row = ride.row
-        self.column = ride.column
-        #willnextbefree currentTime + distance to ride
+    def pick_up(self, time, ride):
+        # increase time to show the distance travelled
+        distance_to_ride = helper.distance(self.currentLocation, ride.start)
+        self.willNextBeFree = time + distance_to_ride + ride.distance
+
+        self.currentLocation = ride.end
