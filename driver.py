@@ -16,7 +16,7 @@ class Driver:
 
         self.currentLocation = ride.end
 
-        self.rides.append(id)
+        self.rides.append(ride.id)
 
     def is_free(self, time):
         return self.willNextBeFree <= time

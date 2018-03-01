@@ -24,6 +24,14 @@ def read_file(filename):
         return rows, columns, totalVehicles, totalRides, bonusPerRide, totalTime
 
 
+def output_file(filename):
+    with open(filename, 'w') as f:
+        for driver in drivers:
+            line = str(len(driver.rides))
+            for ride in driver.rides:
+                line += ride + " "
+            f.write(f'{line}\n')
+
 def main():
     '''
     Main function
